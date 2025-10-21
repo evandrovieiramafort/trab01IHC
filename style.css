@@ -312,3 +312,37 @@ footer {
 .hidden {
     display: none;
 }
+
+.logo-onix-display {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    flex-shrink: 0;
+}
+
+.logo-onix-display img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.download-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+}
+
+.download-icon-modal {
+    font-size: 30px;
+    color: #f9d71c;
+}
+
+.download-text {
+    margin: 0;
+    color: #ccc;
+    font-size: 1em;
+}
