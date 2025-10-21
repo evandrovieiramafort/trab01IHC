@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
     <div class="app-container">
-        
+
         <div class="top-bar">
             <span class="time">22:22</span>
             <div class="battery-status">100% <i class="fas fa-battery-full"></i></div>
@@ -55,20 +57,28 @@
                 <img id="carImage" src="img/carroAzul.png" alt="Carro customizável">
             </div>
 
-            <div class="video-generator">
-                <button id="generateVideoButton">Gerar Simulação em Vídeo</button>
-                <div id="loadingMessage" class="hidden">
+            <div class="video-controls">
+                <button id="generateVideoButton" class="main-button">Gerar Simulação de Vídeo</button>
+                <div id="loadingMessage" class="hidden loading-message">
                     <p>Processando com IA...</p>
                 </div>
-                <div id="videoResult" class="hidden">
-                    <p>Seu vídeo está pronto!</p>
-                    <a href="#" id="videoLink" class="video-link">Clique para assistir</a>
+                <div id="videoResult" class="hidden video-result-section">
+                    <a href="#" id="videoLink" class="secondary-button">Clique para assistir</a>
                 </div>
             </div>
         </main>
 
         <footer>
-            <nav class="custom-options">
+            <div class="footer-top-row">
+                <div class="footer-side-icons">
+                    <i class="fas fa-wrench"></i>
+                    <i class="fas fa-paint-roller"></i>
+                </div>
+                <div class="footer-side-icons">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <div class="main-options-panel">
                 <button class="option">
                     <img src="img/iconeRodas.png" alt="Rodas">
                     <span>Rodas</span>
@@ -81,9 +91,8 @@
                     <img src="img/iconeMotor.png" alt="Motor">
                     <span>Motor</span>
                 </button>
-                <i class="fas fa-shopping-cart cart-icon"></i>
-            </nav>
-            <div class="home-bar"></div>
+            </div>
+            <div class="home-button"></div>
         </footer>
     </div>
 
@@ -91,12 +100,15 @@
         <div class="modal-content">
             <button id="closeModalButton" class="close-button">&times;</button>
             <video id="simulationVideo" width="100%" controls loop>
-                <source src="simulacao-video.mp4" type="video/mp4">
-                Seu navegador não suporta a tag de vídeo.
+                <source src="Carro_em_Showroom_Graus.mp4" type="video/mp4">
             </video>
+            <i class="fas fa-download download-icon-modal"></i>
+            <p class="download-text">Baixar vídeo</p>
+            <button id="closeModalViaButton" class="secondary-button">Clique para assistir</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
